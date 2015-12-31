@@ -1,13 +1,15 @@
----
+sudo: false
 language: node_js
 node_js:
-  - "iojs-v2.1"
-  - "iojs"
-
-sudo: false
-
-cache:
-  directories:
-    - node_modules
-
+- '0.12'
+- '0.10'
+- iojs
 after_success: npm run coverage
+deploy:
+  provider: npm
+  email: clarkbw@gmail.com
+  api_key:
+    secure: 
+  on:
+    tags: true
+    repo: FluxAugur/loopback-ds-ips-mixin

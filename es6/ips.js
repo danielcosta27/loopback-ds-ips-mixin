@@ -1,25 +1,12 @@
-'use strict';
+import ipware from 'ipware';
+import _debug from './debug';
+const debug = _debug();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var ipware = require('ipware');
-
-var _debug2 = require('./debug');
-var _debug3 = _interopRequireDefault(_debug2);
-var debug = (0, _debug3['default'])();
-
-exports['default'] = function (Model) {
-  var options = arguments.length == 1 || arguments[1] === undefined ? {} : arguments[1];
+export default (Model, options = {}) => {
 
   debug('IPs mixin for Model %s', Model.modelName);
 
-  options = _extends({createdByIp: 'createdByIp', updatedByIp: 'updatedByIp', required: true}, options);
+  options = Object.assign({createdByIp: 'createdByIp', updatedByIp: 'updatedByIp', required: true}, options);
 
   debug('options', options);
 
@@ -64,6 +51,3 @@ exports['default'] = function (Model) {
   }
 
 };
-
-module.exports = exports['default'];
-//# sourceMappingURL=ips.js.map

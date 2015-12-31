@@ -1,6 +1,7 @@
 {
   "preset": "google",
   "excludeFiles": ["node_modules"],
+  "esnext": true,
   "requireCurlyBraces": [
      "else",
      "for",
@@ -15,10 +16,5 @@
      "value": 120,
      "allowComments": true,
      "allowRegex": true
-  },
-  "validateJSDoc": {
-    "checkParamNames": false,
-    "checkRedundantParams": false,
-    "requireParamTypes": true
   }
 }
