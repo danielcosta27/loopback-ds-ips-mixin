@@ -24,26 +24,35 @@
     "type": "git",
     "url": "https://github.com/FluxAugur/loopback-ds-ips-mixin.git"
   },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-object-assign",
+      "transform-es2015-modules-commonjs"
+    ]
+  },
   "dependencies": {
-    "babel-plugin-rewire": "^1.0.0-beta-3",
-    "debug": "2.x",
+    "debug": "^2.6.1",
     "ipware": "0.0.5"
   },
-  "peerDependencies": {
-    "loopback-datasource-juggler": ">=2.33.2"
-  },
   "devDependencies": {
-    "babel-core": "latest",
-    "babel-plugin-object-assign": "latest",
-    "coveralls": "latest",
+    "babel-core": "^6.23.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.23.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-es2015": "^6.22.0",
+    "coveralls": "^2.11.16",
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.0.1",
     "gulp": "latest",
-    "gulp-babel": "latest",
-    "gulp-sourcemaps": "latest",
-    "jscs": "latest",
-    "jshint": "latest",
-    "loopback": "2.x",
-    "loopback-boot": "2.x",
-    "nyc": "latest",
-    "tap": "latest"
+    "gulp-babel": "^6.1.2",
+    "gulp-sourcemaps": "^2.4.1",
+    "loopback": "^3.4.0",
+    "loopback-boot": "^2.23.0",
+    "loopback-datasource-juggler": "^3.12.0",
+    "nyc": "^10.1.2",
+    "tap": "^10.2.1"
   }
 }

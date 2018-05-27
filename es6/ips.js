@@ -4,7 +4,7 @@ const debug = _debug();
 
 export default (Model, options = {}) => {
 
-  debug('IPs mixin for Model %s', Model.modelName);
+  debug('Ips mixin for Model %s', Model.modelName);
 
   options = Object.assign({createdByIp: 'createdByIp', updatedByIp: 'updatedByIp', required: true}, options);
 

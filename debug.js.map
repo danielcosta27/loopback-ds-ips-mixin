@@ -1,0 +1,1 @@
+{"version":3,"sources":["debug.js"],"names":["name"],"mappings":";;;;;;AAAA;;;;;;kBAEe;AAAA,MAACA,IAAD,uEAAM,KAAN;AAAA,SAAgB,0CAAyBA,IAAzB,CAAhB;AAAA,C","file":"debug.js","sourcesContent":["import debug from 'debug';\n\nexport default (name='ips') => debug(`loopback:mixins:${name}`);\n"],"sourceRoot":"/Users/daniel/fontes/temp/loopback-ds-ips-mixin/es6"}
