@@ -23,7 +23,7 @@ export default (Model, options = {}) => {
     debug('ctx.options', ctx.options);
     if (ctx.options && ctx.options.skipUpdatedAt) { return next(); }
 
-    var ip = getClientIp(ctx, next);
+    var ip = getClientIp(ctx /*, next */);
 
     if (ctx.instance) {
       if (ctx.isNewInstance) {
@@ -43,11 +43,12 @@ export default (Model, options = {}) => {
     next();
   });
 
-  function getClientIp(ctx, next) {
+  function getClientIp(ctx /*, next */) {
     // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
     if (ctx.req) { return ipware().get_ip(req).clientIp; } // jshint ignore:line
     // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
-    return next();
+    //return next();
+    return undefined;
   }
 
 };

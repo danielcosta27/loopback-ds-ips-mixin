@@ -43,7 +43,7 @@ exports.default = function (Model) {
       return next();
     }
 
-    var ip = getClientIp(ctx, next);
+    var ip = getClientIp(ctx /*, next */);
 
     if (ctx.instance) {
       if (ctx.isNewInstance) {
@@ -63,13 +63,14 @@ exports.default = function (Model) {
     next();
   });
 
-  function getClientIp(ctx, next) {
+  function getClientIp(ctx /*, next */) {
     // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
     if (ctx.req) {
       return (0, _ipware2.default)().get_ip(req).clientIp;
     } // jshint ignore:line
     // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
-    return next();
+    //return next();
+    return undefined;
   }
 };
 //# sourceMappingURL=ips.js.map
